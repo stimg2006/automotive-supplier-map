@@ -418,6 +418,36 @@
     .company-group-label.Tier1 { background: #dcfce7; color: #15803d; }
     .company-group-label.Tier2 { background: #ffedd5; color: #c2410c; }
 
+    /* OEM type header row */
+    .company-type-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2px;
+    }
+
+    /* OEM region sub-group */
+    .oem-region-group {
+      margin-left: 6px;
+      border-left: 2px solid #e8edf8;
+      padding-left: 8px;
+      margin-bottom: 6px;
+    }
+
+    .oem-region-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 6px 0 2px;
+    }
+
+    .oem-region-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: #6b7280;
+      letter-spacing: 0.3px;
+    }
+
     .company-toggle-item {
       display: flex;
       align-items: center;
@@ -780,43 +810,132 @@
   // ===== Company filter =====
   const TYPE_COLORS_MAP = { OEM: '#2563eb', Tier1: '#16a34a', Tier2: '#ea580c' };
 
-  // 会社ごとに type を取得
-  const companyTypeMap = {};
-  LOCATIONS.forEach(l => { companyTypeMap[l.company] = l.company_type; });
+  const OEM_REGION_ORDER  = ['Japan', 'Europe', 'North America', 'China', 'Asia', 'Other'];
+  const OEM_REGION_LABELS = {
+    'Japan':         '🇯🇵 日本',
+    'Europe':        '🇪🇺 欧州',
+    'North America': '🌎 北米',
+    'China':         '🇨🇳 中国',
+    'Asia':          '🌏 アジア',
+    'Other':         '🌍 その他',
+  };
+
+  // 会社ごとに type・本社地域 を取得（最初に見つかったHQの地域を使用）
+  const companyTypeMap       = {};
+  const companyHomeRegionMap = {};
+  const companyHasHQ         = {};
+  LOCATIONS.forEach(l => {
+    companyTypeMap[l.company] = l.company_type;
+    if (!companyHomeRegionMap[l.company]) {
+      companyHomeRegionMap[l.company] = l.region; // 暫定（最初の拠点）
+    }
+    if (l.site_type === 'HQ' && !companyHasHQ[l.company]) {
+      companyHomeRegionMap[l.company] = l.region; // 最初のHQで確定
+      companyHasHQ[l.company] = true;
+    }
+  });
+
+  function renderCompanyItems(companies, color) {
+    return companies.map(company => {
+      const checked  = state.activeCompanies.has(company) ? 'checked' : '';
+      const offClass = checked ? '' : 'off';
+      return `<label class="company-toggle-item ${offClass}" data-company="${company}">
+        <input type="checkbox" ${checked} data-company="${company}" />
+        <span class="dot" style="background:${color}"></span>
+        ${company}
+      </label>`;
+    }).join('');
+  }
 
   function buildCompanyFilter() {
     const body = document.getElementById('company-filter-body');
-    const groups = { OEM: [], Tier1: [], Tier2: [] };
-    ALL_COMPANIES.forEach(c => groups[companyTypeMap[c]].push(c));
 
-    body.innerHTML = ['OEM', 'Tier1', 'Tier2'].map(type => `
+    // OEM: 地域ごとにグループ化
+    const oemByRegion = {};
+    OEM_REGION_ORDER.forEach(r => oemByRegion[r] = []);
+    ALL_COMPANIES.forEach(c => {
+      if (companyTypeMap[c] !== 'OEM') return;
+      const r = companyHomeRegionMap[c] || 'Other';
+      (oemByRegion[r] || oemByRegion['Other']).push(c);
+    });
+
+    const oemHTML = `
       <div>
-        <span class="company-group-label ${type}">${type}</span>
-        ${groups[type].map(company => {
-          const color = TYPE_COLORS_MAP[type];
-          const checked = state.activeCompanies.has(company) ? 'checked' : '';
-          const offClass = checked ? '' : 'off';
-          return `
-            <label class="company-toggle-item ${offClass}" data-company="${company}">
-              <input type="checkbox" ${checked} data-company="${company}" />
-              <span class="dot" style="background:${color}"></span>
-              ${company}
-            </label>`;
-        }).join('')}
-      </div>
-    `).join('');
+        <div class="company-type-header">
+          <span class="company-group-label OEM">OEM</span>
+          <div class="toggle-all-btns">
+            <button class="toggle-all-btn" data-group-type="OEM" data-group-action="on">全ON</button>
+            <button class="toggle-all-btn" data-group-type="OEM" data-group-action="off">全OFF</button>
+          </div>
+        </div>
+        ${OEM_REGION_ORDER.filter(r => oemByRegion[r].length > 0).map(r => `
+          <div class="oem-region-group">
+            <div class="oem-region-header">
+              <span class="oem-region-label">${OEM_REGION_LABELS[r]}</span>
+              <div class="toggle-all-btns">
+                <button class="toggle-all-btn" data-region="${r}" data-region-action="on">全ON</button>
+                <button class="toggle-all-btn" data-region="${r}" data-region-action="off">全OFF</button>
+              </div>
+            </div>
+            ${renderCompanyItems(oemByRegion[r], TYPE_COLORS_MAP['OEM'])}
+          </div>
+        `).join('')}
+      </div>`;
 
+    // Tier1 / Tier2: 従来通り
+    const tierHTML = ['Tier1', 'Tier2'].map(type => {
+      const cos = ALL_COMPANIES.filter(c => companyTypeMap[c] === type);
+      return `
+        <div style="margin-top:6px">
+          <div class="company-type-header">
+            <span class="company-group-label ${type}">${type}</span>
+            <div class="toggle-all-btns">
+              <button class="toggle-all-btn" data-group-type="${type}" data-group-action="on">全ON</button>
+              <button class="toggle-all-btn" data-group-type="${type}" data-group-action="off">全OFF</button>
+            </div>
+          </div>
+          ${renderCompanyItems(cos, TYPE_COLORS_MAP[type])}
+        </div>`;
+    }).join('');
+
+    body.innerHTML = oemHTML + tierHTML;
+
+    // チェックボックス
     body.querySelectorAll('input[type="checkbox"]').forEach(cb => {
       cb.addEventListener('change', () => {
         const company = cb.dataset.company;
-        const label = cb.closest('label');
         if (cb.checked) {
           state.activeCompanies.add(company);
-          label.classList.remove('off');
+          cb.closest('label').classList.remove('off');
         } else {
           state.activeCompanies.delete(company);
-          label.classList.add('off');
+          cb.closest('label').classList.add('off');
         }
+        renderMap();
+      });
+    });
+
+    // 種別 全ON/全OFF
+    body.querySelectorAll('[data-group-type]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const type = btn.dataset.groupType;
+        const on   = btn.dataset.groupAction === 'on';
+        ALL_COMPANIES.filter(c => companyTypeMap[c] === type)
+          .forEach(c => on ? state.activeCompanies.add(c) : state.activeCompanies.delete(c));
+        buildCompanyFilter();
+        renderMap();
+      });
+    });
+
+    // 地域 全ON/全OFF（OEM内）
+    body.querySelectorAll('[data-region]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const region = btn.dataset.region;
+        const on     = btn.dataset.regionAction === 'on';
+        ALL_COMPANIES
+          .filter(c => companyTypeMap[c] === 'OEM' && companyHomeRegionMap[c] === region)
+          .forEach(c => on ? state.activeCompanies.add(c) : state.activeCompanies.delete(c));
+        buildCompanyFilter();
         renderMap();
       });
     });
