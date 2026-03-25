@@ -1,0 +1,10 @@
+# 組織管理フォルダ（公開しない）
+.company/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
