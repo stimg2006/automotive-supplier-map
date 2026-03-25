@@ -346,7 +346,316 @@ const LOCATIONS = [
   { company: "ジェイテクト", company_en: "JTEKT Corporation", company_type: "Tier2", site_type: "Factory", site_name: "JTEKT France工場", lat: 48.8566, lng: 2.3522, city: "Paris近郊", country: "フランス", region: "Europe" },
   { company: "ジェイテクト", company_en: "JTEKT Corporation", company_type: "Tier2", site_type: "Factory", site_name: "JTEKT China工場（天津）", lat: 39.3434, lng: 117.3616, city: "天津", country: "中国", region: "China" },
   { company: "ジェイテクト", company_en: "JTEKT Corporation", company_type: "Tier2", site_type: "Factory", site_name: "JTEKT Thailand工場", lat: 13.7563, lng: 100.5018, city: "バンコク", country: "タイ", region: "Asia" },
-  { company: "ジェイテクト", company_en: "JTEKT Corporation", company_type: "Tier2", site_type: "Factory", site_name: "JTEKT India工場（バンガロール）", lat: 12.9716, lng: 77.5946, city: "バンガロール", country: "インド", region: "Asia" }
+  { company: "ジェイテクト", company_en: "JTEKT Corporation", company_type: "Tier2", site_type: "Factory", site_name: "JTEKT India工場（バンガロール）", lat: 12.9716, lng: 77.5946, city: "バンガロール", country: "インド", region: "Asia" },
+
+  // === 新規追加OEMメーカー ===
+
+  // --- スズキ（Suzuki Motor） ---
+  { company: "スズキ", company_en: "Suzuki Motor Corporation", company_type: "OEM", site_type: "HQ", site_name: "スズキ 本社（浜松）", lat: 34.7108, lng: 137.7261, city: "浜松市", country: "日本", region: "Japan" },
+  { company: "スズキ", company_en: "Suzuki Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "相良工場", lat: 34.696, lng: 138.196, city: "牧之原市", country: "日本", region: "Japan" },
+  { company: "スズキ", company_en: "Suzuki Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "湖西工場", lat: 34.718, lng: 137.548, city: "湖西市", country: "日本", region: "Japan" },
+  { company: "スズキ", company_en: "Suzuki Motor Corporation", company_type: "OEM", site_type: "R&D", site_name: "スズキ 技術センター（浜松）", lat: 34.758, lng: 137.712, city: "浜松市", country: "日本", region: "Japan" },
+  { company: "スズキ", company_en: "Suzuki Motor Corporation", company_type: "OEM", site_type: "Test", site_name: "北海道テストコース（名寄）", lat: 44.36, lng: 142.47, city: "名寄市", country: "日本", region: "Japan" },
+  { company: "スズキ", company_en: "Suzuki Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "Maruti Suzuki Gurugram工場", lat: 28.4595, lng: 77.0266, city: "グルガーオン", country: "インド", region: "Asia" },
+  { company: "スズキ", company_en: "Suzuki Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "Maruti Suzuki Manesar工場", lat: 28.3608, lng: 76.9364, city: "マネサール", country: "インド", region: "Asia" },
+  { company: "スズキ", company_en: "Suzuki Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "Suzuki Indonesia（Bekasi）", lat: -6.2383, lng: 107.0153, city: "Bekasi", country: "インドネシア", region: "Asia" },
+  { company: "スズキ", company_en: "Suzuki Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "Magyar Suzuki（エステルゴム）", lat: 47.7942, lng: 18.7422, city: "Esztergom", country: "ハンガリー", region: "Europe" },
+
+  // --- マツダ（Mazda） ---
+  { company: "マツダ", company_en: "Mazda Motor Corporation", company_type: "OEM", site_type: "HQ", site_name: "マツダ 本社（広島）", lat: 34.3963, lng: 132.4596, city: "安芸郡府中町", country: "日本", region: "Japan" },
+  { company: "マツダ", company_en: "Mazda Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "本社工場（広島）", lat: 34.3963, lng: 132.4596, city: "安芸郡府中町", country: "日本", region: "Japan" },
+  { company: "マツダ", company_en: "Mazda Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "防府工場", lat: 34.0534, lng: 131.5573, city: "防府市", country: "日本", region: "Japan" },
+  { company: "マツダ", company_en: "Mazda Motor Corporation", company_type: "OEM", site_type: "R&D", site_name: "マツダ テクノロジー＆アーツ（広島）", lat: 34.3853, lng: 132.4692, city: "広島市", country: "日本", region: "Japan" },
+  { company: "マツダ", company_en: "Mazda Motor Corporation", company_type: "OEM", site_type: "Test", site_name: "中山試験場（テストコース）", lat: 34.43, lng: 132.49, city: "広島市", country: "日本", region: "Japan" },
+  { company: "マツダ", company_en: "Mazda Motor Corporation", company_type: "OEM", site_type: "Design", site_name: "Mazda Design（広島）", lat: 34.40, lng: 132.46, city: "広島市", country: "日本", region: "Japan" },
+  { company: "マツダ", company_en: "Mazda Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "Mazda Toyota Manufacturing USA（アラバマ）", lat: 34.7, lng: -87.65, city: "Huntsville, AL", country: "アメリカ", region: "North America" },
+  { company: "マツダ", company_en: "Mazda Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "AAT工場（Salamanca, Mexico）", lat: 20.5728, lng: -101.1924, city: "Salamanca", country: "メキシコ", region: "North America" },
+  { company: "マツダ", company_en: "Mazda Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "Changan Mazda工場（重慶）", lat: 29.563, lng: 106.5516, city: "重慶", country: "中国", region: "China" },
+
+  // --- SUBARU（スバル） ---
+  { company: "SUBARU", company_en: "Subaru Corporation", company_type: "OEM", site_type: "HQ", site_name: "SUBARU 本社（渋谷）", lat: 35.6595, lng: 139.7005, city: "渋谷区", country: "日本", region: "Japan" },
+  { company: "SUBARU", company_en: "Subaru Corporation", company_type: "OEM", site_type: "Factory", site_name: "矢島工場（群馬）", lat: 36.3987, lng: 139.0545, city: "太田市", country: "日本", region: "Japan" },
+  { company: "SUBARU", company_en: "Subaru Corporation", company_type: "OEM", site_type: "Factory", site_name: "大泉工場（群馬）", lat: 36.2489, lng: 139.3764, city: "大泉町", country: "日本", region: "Japan" },
+  { company: "SUBARU", company_en: "Subaru Corporation", company_type: "OEM", site_type: "R&D", site_name: "SUBARU 技術研究所（大泉）", lat: 36.2489, lng: 139.3764, city: "大泉町", country: "日本", region: "Japan" },
+  { company: "SUBARU", company_en: "Subaru Corporation", company_type: "OEM", site_type: "Test", site_name: "北海道テストコース（士別）", lat: 44.19, lng: 142.41, city: "士別市", country: "日本", region: "Japan" },
+  { company: "SUBARU", company_en: "Subaru Corporation", company_type: "OEM", site_type: "Factory", site_name: "SIA工場（ラファイエット）", lat: 40.4167, lng: -86.8753, city: "Lafayette, IN", country: "アメリカ", region: "North America" },
+  { company: "SUBARU", company_en: "Subaru Corporation", company_type: "OEM", site_type: "HQ", site_name: "Subaru of America（カムデン）", lat: 39.9259, lng: -75.1196, city: "Camden, NJ", country: "アメリカ", region: "North America" },
+
+  // --- 三菱自動車工業（Mitsubishi Motors） ---
+  { company: "三菱自動車工業", company_en: "Mitsubishi Motors Corporation", company_type: "OEM", site_type: "HQ", site_name: "三菱自動車 本社（港区）", lat: 35.6638, lng: 139.7314, city: "港区", country: "日本", region: "Japan" },
+  { company: "三菱自動車工業", company_en: "Mitsubishi Motors Corporation", company_type: "OEM", site_type: "Factory", site_name: "岡崎製作所", lat: 34.9481, lng: 137.1753, city: "岡崎市", country: "日本", region: "Japan" },
+  { company: "三菱自動車工業", company_en: "Mitsubishi Motors Corporation", company_type: "OEM", site_type: "Factory", site_name: "水島製作所（岡山）", lat: 34.529, lng: 133.7595, city: "倉敷市", country: "日本", region: "Japan" },
+  { company: "三菱自動車工業", company_en: "Mitsubishi Motors Corporation", company_type: "OEM", site_type: "R&D", site_name: "岡崎研究所", lat: 34.9481, lng: 137.1753, city: "岡崎市", country: "日本", region: "Japan" },
+  { company: "三菱自動車工業", company_en: "Mitsubishi Motors Corporation", company_type: "OEM", site_type: "Factory", site_name: "MMTh工場（タイ）", lat: 13.7563, lng: 100.5018, city: "バンコク", country: "タイ", region: "Asia" },
+  { company: "三菱自動車工業", company_en: "Mitsubishi Motors Corporation", company_type: "OEM", site_type: "Factory", site_name: "MMKI工場（カラワン）", lat: -6.3543, lng: 107.3006, city: "Karawang", country: "インドネシア", region: "Asia" },
+  { company: "三菱自動車工業", company_en: "Mitsubishi Motors Corporation", company_type: "OEM", site_type: "HQ", site_name: "MMEurope（アムステルダム）", lat: 52.3676, lng: 4.9041, city: "アムステルダム", country: "オランダ", region: "Europe" },
+
+  // --- ダイハツ工業（Daihatsu） ---
+  { company: "ダイハツ工業", company_en: "Daihatsu Motor Co., Ltd.", company_type: "OEM", site_type: "HQ", site_name: "ダイハツ工業 本社（池田）", lat: 34.8228, lng: 135.4281, city: "池田市", country: "日本", region: "Japan" },
+  { company: "ダイハツ工業", company_en: "Daihatsu Motor Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "本社工場（池田）", lat: 34.8228, lng: 135.4281, city: "池田市", country: "日本", region: "Japan" },
+  { company: "ダイハツ工業", company_en: "Daihatsu Motor Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "京都工場（大山崎）", lat: 34.8924, lng: 135.6862, city: "大山崎町", country: "日本", region: "Japan" },
+  { company: "ダイハツ工業", company_en: "Daihatsu Motor Co., Ltd.", company_type: "OEM", site_type: "R&D", site_name: "技術センター（池田）", lat: 34.8228, lng: 135.4281, city: "池田市", country: "日本", region: "Japan" },
+  { company: "ダイハツ工業", company_en: "Daihatsu Motor Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "ADM工場（Karawang, Indonesia）", lat: -6.3543, lng: 107.3006, city: "Karawang", country: "インドネシア", region: "Asia" },
+  { company: "ダイハツ工業", company_en: "Daihatsu Motor Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "Daihatsu Malaysia（シャーアラム）", lat: 3.0738, lng: 101.5183, city: "Shah Alam", country: "マレーシア", region: "Asia" },
+
+  // --- いすゞ自動車（Isuzu Motors） ---
+  { company: "いすゞ自動車", company_en: "Isuzu Motors Limited", company_type: "OEM", site_type: "HQ", site_name: "いすゞ自動車 本社（品川）", lat: 35.6284, lng: 139.7387, city: "品川区", country: "日本", region: "Japan" },
+  { company: "いすゞ自動車", company_en: "Isuzu Motors Limited", company_type: "OEM", site_type: "Factory", site_name: "藤沢工場", lat: 35.3353, lng: 139.4868, city: "藤沢市", country: "日本", region: "Japan" },
+  { company: "いすゞ自動車", company_en: "Isuzu Motors Limited", company_type: "OEM", site_type: "Factory", site_name: "栃木工場", lat: 36.4038, lng: 139.9705, city: "栃木市", country: "日本", region: "Japan" },
+  { company: "いすゞ自動車", company_en: "Isuzu Motors Limited", company_type: "OEM", site_type: "R&D", site_name: "いすゞ技術センター（藤沢）", lat: 35.3353, lng: 139.4868, city: "藤沢市", country: "日本", region: "Japan" },
+  { company: "いすゞ自動車", company_en: "Isuzu Motors Limited", company_type: "OEM", site_type: "Factory", site_name: "Isuzu Motors Thailand工場", lat: 13.7563, lng: 100.5018, city: "バンコク", country: "タイ", region: "Asia" },
+  { company: "いすゞ自動車", company_en: "Isuzu Motors Limited", company_type: "OEM", site_type: "Factory", site_name: "General Motors Isuzu（合弁）", lat: 31.2304, lng: 121.4737, city: "上海", country: "中国", region: "China" },
+
+  // --- 日野自動車（Hino Motors） ---
+  { company: "日野自動車", company_en: "Hino Motors, Ltd.", company_type: "OEM", site_type: "HQ", site_name: "日野自動車 本社（日野市）", lat: 35.6721, lng: 139.3942, city: "日野市", country: "日本", region: "Japan" },
+  { company: "日野自動車", company_en: "Hino Motors, Ltd.", company_type: "OEM", site_type: "Factory", site_name: "日野工場", lat: 35.6721, lng: 139.3942, city: "日野市", country: "日本", region: "Japan" },
+  { company: "日野自動車", company_en: "Hino Motors, Ltd.", company_type: "OEM", site_type: "Factory", site_name: "古河工場", lat: 36.1931, lng: 139.7066, city: "古河市", country: "日本", region: "Japan" },
+  { company: "日野自動車", company_en: "Hino Motors, Ltd.", company_type: "OEM", site_type: "R&D", site_name: "技術センター（日野）", lat: 35.6721, lng: 139.3942, city: "日野市", country: "日本", region: "Japan" },
+  { company: "日野自動車", company_en: "Hino Motors, Ltd.", company_type: "OEM", site_type: "Factory", site_name: "Hino Motors Thailand工場", lat: 13.7563, lng: 100.5018, city: "バンコク", country: "タイ", region: "Asia" },
+  { company: "日野自動車", company_en: "Hino Motors, Ltd.", company_type: "OEM", site_type: "Factory", site_name: "Hino Motors USA（カリフォルニア）", lat: 33.9425, lng: -118.4081, city: "Torrance, CA", country: "アメリカ", region: "North America" },
+
+  // --- ヤマハ発動機（Yamaha Motor） ---
+  { company: "ヤマハ発動機", company_en: "Yamaha Motor Co., Ltd.", company_type: "OEM", site_type: "HQ", site_name: "ヤマハ発動機 本社（磐田）", lat: 34.7189, lng: 137.8513, city: "磐田市", country: "日本", region: "Japan" },
+  { company: "ヤマハ発動機", company_en: "Yamaha Motor Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "磐田工場", lat: 34.7189, lng: 137.8513, city: "磐田市", country: "日本", region: "Japan" },
+  { company: "ヤマハ発動機", company_en: "Yamaha Motor Co., Ltd.", company_type: "OEM", site_type: "R&D", site_name: "ヤマハ技術研究所（磐田）", lat: 34.7189, lng: 137.8513, city: "磐田市", country: "日本", region: "Japan" },
+  { company: "ヤマハ発動機", company_en: "Yamaha Motor Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "Yamaha Motor India（スリペランブドゥール）", lat: 12.7378, lng: 79.9484, city: "Sriperumbudur", country: "インド", region: "Asia" },
+  { company: "ヤマハ発動機", company_en: "Yamaha Motor Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "Yamaha Thailand（プラチンブリ）", lat: 14.0508, lng: 101.3654, city: "Prachinburi", country: "タイ", region: "Asia" },
+  { company: "ヤマハ発動機", company_en: "Yamaha Motor Co., Ltd.", company_type: "OEM", site_type: "HQ", site_name: "Yamaha Motor USA（ケネーソー）", lat: 34.02, lng: -84.62, city: "Kennesaw, GA", country: "アメリカ", region: "North America" },
+
+  // --- 光岡自動車（Mitsuoka） ---
+  { company: "光岡自動車", company_en: "Mitsuoka Motor Co., Ltd.", company_type: "OEM", site_type: "HQ", site_name: "光岡自動車 本社（富山）", lat: 36.7002, lng: 137.2137, city: "富山市", country: "日本", region: "Japan" },
+  { company: "光岡自動車", company_en: "Mitsuoka Motor Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "光岡自動車 工場（富山）", lat: 36.7002, lng: 137.2137, city: "富山市", country: "日本", region: "Japan" },
+  { company: "光岡自動車", company_en: "Mitsuoka Motor Co., Ltd.", company_type: "OEM", site_type: "Sales", site_name: "光岡自動車 東京ショールーム", lat: 35.6762, lng: 139.6503, city: "東京", country: "日本", region: "Japan" },
+
+  // --- アウディ（Audi） ---
+  { company: "アウディ", company_en: "Audi AG", company_type: "OEM", site_type: "HQ", site_name: "Audi AG 本社（インゴルシュタット）", lat: 48.7758, lng: 11.4302, city: "Ingolstadt", country: "ドイツ", region: "Europe" },
+  { company: "アウディ", company_en: "Audi AG", company_type: "OEM", site_type: "Factory", site_name: "インゴルシュタット工場", lat: 48.7720, lng: 11.4250, city: "Ingolstadt", country: "ドイツ", region: "Europe" },
+  { company: "アウディ", company_en: "Audi AG", company_type: "OEM", site_type: "Factory", site_name: "Neckarsulm工場", lat: 49.1971, lng: 9.2247, city: "Neckarsulm", country: "ドイツ", region: "Europe" },
+  { company: "アウディ", company_en: "Audi AG", company_type: "OEM", site_type: "R&D", site_name: "Audi 技術センター（インゴルシュタット）", lat: 48.7758, lng: 11.4302, city: "Ingolstadt", country: "ドイツ", region: "Europe" },
+  { company: "アウディ", company_en: "Audi AG", company_type: "OEM", site_type: "Design", site_name: "Audi Design Center（ミュンヘン）", lat: 48.1351, lng: 11.5820, city: "ミュンヘン", country: "ドイツ", region: "Europe" },
+  { company: "アウディ", company_en: "Audi AG", company_type: "OEM", site_type: "Test", site_name: "Audi Neuburg Proving Ground", lat: 48.7337, lng: 11.1815, city: "Neuburg an der Donau", country: "ドイツ", region: "Europe" },
+  { company: "アウディ", company_en: "Audi AG", company_type: "OEM", site_type: "Factory", site_name: "Győr工場（ハンガリー）", lat: 47.6875, lng: 17.6504, city: "Győr", country: "ハンガリー", region: "Europe" },
+  { company: "アウディ", company_en: "Audi AG", company_type: "OEM", site_type: "Factory", site_name: "Brussels工場", lat: 50.8503, lng: 4.3517, city: "ブリュッセル", country: "ベルギー", region: "Europe" },
+  { company: "アウディ", company_en: "Audi AG", company_type: "OEM", site_type: "Factory", site_name: "San José Chiapa工場（メキシコ）", lat: 19.3617, lng: -97.6745, city: "San José Chiapa", country: "メキシコ", region: "North America" },
+  { company: "アウディ", company_en: "Audi AG", company_type: "OEM", site_type: "Factory", site_name: "FAW-VW Audi（長春）", lat: 43.8171, lng: 125.3235, city: "長春", country: "中国", region: "China" },
+
+  // --- ポルシェ（Porsche） ---
+  { company: "ポルシェ", company_en: "Porsche AG", company_type: "OEM", site_type: "HQ", site_name: "Porsche AG 本社（シュトゥットガルト-ツッフェンハウゼン）", lat: 48.8284, lng: 9.1545, city: "Stuttgart-Zuffenhausen", country: "ドイツ", region: "Europe" },
+  { company: "ポルシェ", company_en: "Porsche AG", company_type: "OEM", site_type: "Factory", site_name: "ツッフェンハウゼン工場", lat: 48.8284, lng: 9.1545, city: "Stuttgart-Zuffenhausen", country: "ドイツ", region: "Europe" },
+  { company: "ポルシェ", company_en: "Porsche AG", company_type: "OEM", site_type: "Factory", site_name: "Leipzig工場（カイエン/マカン）", lat: 51.3636, lng: 12.3786, city: "Leipzig", country: "ドイツ", region: "Europe" },
+  { company: "ポルシェ", company_en: "Porsche AG", company_type: "OEM", site_type: "R&D", site_name: "Weissach開発センター", lat: 48.8284, lng: 8.9126, city: "Weissach", country: "ドイツ", region: "Europe" },
+  { company: "ポルシェ", company_en: "Porsche AG", company_type: "OEM", site_type: "Test", site_name: "Weissachテストコース", lat: 48.8299, lng: 8.9132, city: "Weissach", country: "ドイツ", region: "Europe" },
+  { company: "ポルシェ", company_en: "Porsche AG", company_type: "OEM", site_type: "Design", site_name: "Porsche Design Center（ミュンヘン）", lat: 48.1351, lng: 11.5820, city: "ミュンヘン", country: "ドイツ", region: "Europe" },
+  { company: "ポルシェ", company_en: "Porsche AG", company_type: "OEM", site_type: "HQ", site_name: "Porsche Cars North America（アトランタ）", lat: 33.7490, lng: -84.3880, city: "Atlanta, GA", country: "アメリカ", region: "North America" },
+
+  // --- BMWアルピナ（Alpina） ---
+  { company: "アルピナ", company_en: "Alpina Burkard Bovensiepen GmbH", company_type: "OEM", site_type: "HQ", site_name: "Alpina 本社（ブッハロー）", lat: 47.9855, lng: 10.7333, city: "Buchloe", country: "ドイツ", region: "Europe" },
+  { company: "アルピナ", company_en: "Alpina Burkard Bovensiepen GmbH", company_type: "OEM", site_type: "Factory", site_name: "Alpina 製造工場（ブッハロー）", lat: 47.9855, lng: 10.7333, city: "Buchloe", country: "ドイツ", region: "Europe" },
+  { company: "アルピナ", company_en: "Alpina Burkard Bovensiepen GmbH", company_type: "OEM", site_type: "Sales", site_name: "Alpina Japan事務所（東京）", lat: 35.6762, lng: 139.6503, city: "東京", country: "日本", region: "Japan" },
+
+  // --- オペル（Opel） ---
+  { company: "オペル", company_en: "Opel Automobile GmbH", company_type: "OEM", site_type: "HQ", site_name: "Opel 本社（リュッセルスハイム）", lat: 49.9929, lng: 8.4172, city: "Rüsselsheim", country: "ドイツ", region: "Europe" },
+  { company: "オペル", company_en: "Opel Automobile GmbH", company_type: "OEM", site_type: "Factory", site_name: "リュッセルスハイム工場", lat: 49.9929, lng: 8.4172, city: "Rüsselsheim", country: "ドイツ", region: "Europe" },
+  { company: "オペル", company_en: "Opel Automobile GmbH", company_type: "OEM", site_type: "Factory", site_name: "Eisenach工場", lat: 50.9736, lng: 10.3153, city: "Eisenach", country: "ドイツ", region: "Europe" },
+  { company: "オペル", company_en: "Opel Automobile GmbH", company_type: "OEM", site_type: "R&D", site_name: "Opel International Technical Development Centre（ITC）", lat: 49.9929, lng: 8.4172, city: "Rüsselsheim", country: "ドイツ", region: "Europe" },
+  { company: "オペル", company_en: "Opel Automobile GmbH", company_type: "OEM", site_type: "Test", site_name: "Dudenhofen Test Center", lat: 49.8275, lng: 8.6763, city: "Dudenhofen", country: "ドイツ", region: "Europe" },
+  { company: "オペル", company_en: "Opel Automobile GmbH", company_type: "OEM", site_type: "Factory", site_name: "Ellesmere Port工場（イギリス）", lat: 53.2791, lng: -2.8978, city: "Ellesmere Port", country: "イギリス", region: "Europe" },
+
+  // --- マイバッハ（Maybach / Mercedes-Benz） ---
+  { company: "マイバッハ", company_en: "Mercedes-Maybach", company_type: "OEM", site_type: "Factory", site_name: "Mercedes-Maybach製造（ジンデルフィンゲン）", lat: 48.7120, lng: 9.0060, city: "Sindelfingen", country: "ドイツ", region: "Europe" },
+  { company: "マイバッハ", company_en: "Mercedes-Maybach", company_type: "OEM", site_type: "HQ", site_name: "Mercedes-Maybach ブランドHQ（シュトゥットガルト）", lat: 48.7758, lng: 9.1829, city: "シュトゥットガルト", country: "ドイツ", region: "Europe" },
+  { company: "マイバッハ", company_en: "Mercedes-Maybach", company_type: "OEM", site_type: "Design", site_name: "Mercedes-Maybach Design（ジンデルフィンゲン）", lat: 48.712, lng: 9.002, city: "Sindelfingen", country: "ドイツ", region: "Europe" },
+
+  // --- クライスラー / Stellantis ---
+  { company: "クライスラー", company_en: "Chrysler (Stellantis)", company_type: "OEM", site_type: "HQ", site_name: "Chrysler ブランドHQ（オーバーン・ヒルズ）", lat: 42.6637, lng: -83.2353, city: "Auburn Hills, MI", country: "アメリカ", region: "North America" },
+  { company: "クライスラー", company_en: "Chrysler (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Jefferson North Assembly Plant（デトロイト）", lat: 42.4064, lng: -83.0253, city: "Detroit, MI", country: "アメリカ", region: "North America" },
+  { company: "クライスラー", company_en: "Chrysler (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Sterling Heights Assembly Plant", lat: 42.5803, lng: -83.0302, city: "Sterling Heights, MI", country: "アメリカ", region: "North America" },
+  { company: "クライスラー", company_en: "Chrysler (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Belvidere Assembly Plant（イリノイ）", lat: 42.2592, lng: -88.8432, city: "Belvidere, IL", country: "アメリカ", region: "North America" },
+
+  // --- テスラ（Tesla） ---
+  { company: "テスラ", company_en: "Tesla, Inc.", company_type: "OEM", site_type: "HQ", site_name: "Tesla 本社（オースティン）", lat: 30.2672, lng: -97.7431, city: "Austin, TX", country: "アメリカ", region: "North America" },
+  { company: "テスラ", company_en: "Tesla, Inc.", company_type: "OEM", site_type: "Factory", site_name: "Fremont Factory（CA）", lat: 37.4924, lng: -121.9468, city: "Fremont, CA", country: "アメリカ", region: "North America" },
+  { company: "テスラ", company_en: "Tesla, Inc.", company_type: "OEM", site_type: "Factory", site_name: "Gigafactory Texas（オースティン）", lat: 30.2265, lng: -97.6008, city: "Austin, TX", country: "アメリカ", region: "North America" },
+  { company: "テスラ", company_en: "Tesla, Inc.", company_type: "OEM", site_type: "Factory", site_name: "Gigafactory Nevada（スパークス）", lat: 39.5381, lng: -119.4387, city: "Sparks, NV", country: "アメリカ", region: "North America" },
+  { company: "テスラ", company_en: "Tesla, Inc.", company_type: "OEM", site_type: "R&D", site_name: "Tesla R&D（パロアルト）", lat: 37.4419, lng: -122.143, city: "Palo Alto, CA", country: "アメリカ", region: "North America" },
+  { company: "テスラ", company_en: "Tesla, Inc.", company_type: "OEM", site_type: "Factory", site_name: "Gigafactory Berlin-Brandenburg（グリューンハイデ）", lat: 52.3733, lng: 13.8000, city: "Grünheide", country: "ドイツ", region: "Europe" },
+  { company: "テスラ", company_en: "Tesla, Inc.", company_type: "OEM", site_type: "Factory", site_name: "Gigafactory Shanghai（上海）", lat: 30.8701, lng: 121.7800, city: "上海", country: "中国", region: "China" },
+  { company: "テスラ", company_en: "Tesla, Inc.", company_type: "OEM", site_type: "Design", site_name: "Tesla Design Center（ロサンゼルス）", lat: 34.0195, lng: -118.4912, city: "Los Angeles, CA", country: "アメリカ", region: "North America" },
+
+  // --- フェラーリ（Ferrari） ---
+  { company: "フェラーリ", company_en: "Ferrari N.V.", company_type: "OEM", site_type: "HQ", site_name: "Ferrari 本社（マラネッロ）", lat: 44.5278, lng: 10.8640, city: "Maranello", country: "イタリア", region: "Europe" },
+  { company: "フェラーリ", company_en: "Ferrari N.V.", company_type: "OEM", site_type: "Factory", site_name: "マラネッロ工場", lat: 44.5278, lng: 10.8640, city: "Maranello", country: "イタリア", region: "Europe" },
+  { company: "フェラーリ", company_en: "Ferrari N.V.", company_type: "OEM", site_type: "R&D", site_name: "Ferrari 開発センター（マラネッロ）", lat: 44.5278, lng: 10.8640, city: "Maranello", country: "イタリア", region: "Europe" },
+  { company: "フェラーリ", company_en: "Ferrari N.V.", company_type: "OEM", site_type: "Test", site_name: "Fiorano Circuit（テストコース）", lat: 44.5183, lng: 10.8684, city: "Fiorano Modenese", country: "イタリア", region: "Europe" },
+  { company: "フェラーリ", company_en: "Ferrari N.V.", company_type: "OEM", site_type: "Design", site_name: "Ferrari Design Center（マラネッロ）", lat: 44.5270, lng: 10.8655, city: "Maranello", country: "イタリア", region: "Europe" },
+
+  // --- ランボルギーニ（Lamborghini） ---
+  { company: "ランボルギーニ", company_en: "Automobili Lamborghini S.p.A.", company_type: "OEM", site_type: "HQ", site_name: "Lamborghini 本社（サンタガタ・ボロニェーゼ）", lat: 44.5382, lng: 11.1256, city: "Sant'Agata Bolognese", country: "イタリア", region: "Europe" },
+  { company: "ランボルギーニ", company_en: "Automobili Lamborghini S.p.A.", company_type: "OEM", site_type: "Factory", site_name: "サンタガタ工場", lat: 44.5382, lng: 11.1256, city: "Sant'Agata Bolognese", country: "イタリア", region: "Europe" },
+  { company: "ランボルギーニ", company_en: "Automobili Lamborghini S.p.A.", company_type: "OEM", site_type: "R&D", site_name: "Lamborghini Research Center", lat: 44.5382, lng: 11.1256, city: "Sant'Agata Bolognese", country: "イタリア", region: "Europe" },
+  { company: "ランボルギーニ", company_en: "Automobili Lamborghini S.p.A.", company_type: "OEM", site_type: "Test", site_name: "Nardò Technical Center（南イタリア）", lat: 40.3000, lng: 17.9700, city: "Nardò", country: "イタリア", region: "Europe" },
+
+  // --- マセラティ（Maserati） ---
+  { company: "マセラティ", company_en: "Maserati S.p.A.", company_type: "OEM", site_type: "HQ", site_name: "Maserati 本社（モデナ）", lat: 44.6488, lng: 10.9255, city: "Modena", country: "イタリア", region: "Europe" },
+  { company: "マセラティ", company_en: "Maserati S.p.A.", company_type: "OEM", site_type: "Factory", site_name: "Maserati Grugliasco工場（トリノ近郊）", lat: 45.0607, lng: 7.5756, city: "Grugliasco", country: "イタリア", region: "Europe" },
+  { company: "マセラティ", company_en: "Maserati S.p.A.", company_type: "OEM", site_type: "Factory", site_name: "Cassino工場（Grecale）", lat: 41.4900, lng: 13.8300, city: "Cassino", country: "イタリア", region: "Europe" },
+  { company: "マセラティ", company_en: "Maserati S.p.A.", company_type: "OEM", site_type: "R&D", site_name: "Maserati 開発センター（モデナ）", lat: 44.6488, lng: 10.9255, city: "Modena", country: "イタリア", region: "Europe" },
+
+  // --- フィアット（Fiat / Stellantis） ---
+  { company: "フィアット", company_en: "Fiat (Stellantis)", company_type: "OEM", site_type: "HQ", site_name: "Fiat ブランドHQ（トリノ）", lat: 45.0703, lng: 7.6869, city: "トリノ", country: "イタリア", region: "Europe" },
+  { company: "フィアット", company_en: "Fiat (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Mirafiori工場（500e）", lat: 45.0272, lng: 7.6177, city: "トリノ", country: "イタリア", region: "Europe" },
+  { company: "フィアット", company_en: "Fiat (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Tichy工場（ポーランド）", lat: 50.1228, lng: 18.9989, city: "Tychy", country: "ポーランド", region: "Europe" },
+  { company: "フィアット", company_en: "Fiat (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Kragujevac工場（セルビア）", lat: 44.0128, lng: 20.9237, city: "Kragujevac", country: "セルビア", region: "Europe" },
+  { company: "フィアット", company_en: "Fiat (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Betim工場（ブラジル）", lat: -19.9697, lng: -44.1969, city: "Betim", country: "ブラジル", region: "Other" },
+
+  // --- アルファロメオ（Alfa Romeo / Stellantis） ---
+  { company: "アルファロメオ", company_en: "Alfa Romeo (Stellantis)", company_type: "OEM", site_type: "HQ", site_name: "Alfa Romeo ブランドHQ（ミラノ）", lat: 45.4654, lng: 9.1859, city: "ミラノ", country: "イタリア", region: "Europe" },
+  { company: "アルファロメオ", company_en: "Alfa Romeo (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Cassino工場（ジュリア/ステルヴィオ）", lat: 41.4900, lng: 13.8300, city: "Cassino", country: "イタリア", region: "Europe" },
+  { company: "アルファロメオ", company_en: "Alfa Romeo (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Pomigliano工場（ミト/トナーレ）", lat: 40.9049, lng: 14.3793, city: "Pomigliano d'Arco", country: "イタリア", region: "Europe" },
+  { company: "アルファロメオ", company_en: "Alfa Romeo (Stellantis)", company_type: "OEM", site_type: "Design", site_name: "Alfa Romeo Centro Stile（ミラノ）", lat: 45.4654, lng: 9.1859, city: "ミラノ", country: "イタリア", region: "Europe" },
+
+  // --- ロールスロイス（Rolls-Royce） ---
+  { company: "ロールスロイス", company_en: "Rolls-Royce Motor Cars", company_type: "OEM", site_type: "HQ", site_name: "Rolls-Royce 本社（グッドウッド）", lat: 50.8614, lng: -0.7214, city: "Goodwood", country: "イギリス", region: "Europe" },
+  { company: "ロールスロイス", company_en: "Rolls-Royce Motor Cars", company_type: "OEM", site_type: "Factory", site_name: "Goodwood Manufacturing Facility", lat: 50.8614, lng: -0.7214, city: "Goodwood", country: "イギリス", region: "Europe" },
+  { company: "ロールスロイス", company_en: "Rolls-Royce Motor Cars", company_type: "OEM", site_type: "Design", site_name: "Rolls-Royce デザインセンター（グッドウッド）", lat: 50.8614, lng: -0.7214, city: "Goodwood", country: "イギリス", region: "Europe" },
+
+  // --- ベントレー（Bentley） ---
+  { company: "ベントレー", company_en: "Bentley Motors Limited", company_type: "OEM", site_type: "HQ", site_name: "Bentley 本社（クルー）", lat: 53.0967, lng: -2.4405, city: "Crewe", country: "イギリス", region: "Europe" },
+  { company: "ベントレー", company_en: "Bentley Motors Limited", company_type: "OEM", site_type: "Factory", site_name: "Crewe工場", lat: 53.0967, lng: -2.4405, city: "Crewe", country: "イギリス", region: "Europe" },
+  { company: "ベントレー", company_en: "Bentley Motors Limited", company_type: "OEM", site_type: "R&D", site_name: "Bentley 技術センター（クルー）", lat: 53.0967, lng: -2.4405, city: "Crewe", country: "イギリス", region: "Europe" },
+  { company: "ベントレー", company_en: "Bentley Motors Limited", company_type: "OEM", site_type: "Design", site_name: "Bentley デザインスタジオ（クルー）", lat: 53.0967, lng: -2.4405, city: "Crewe", country: "イギリス", region: "Europe" },
+
+  // --- ジャガー（Jaguar / JLR） ---
+  { company: "ジャガー", company_en: "Jaguar Land Rover (JLR)", company_type: "OEM", site_type: "HQ", site_name: "JLR 本社（コベントリー）", lat: 52.4068, lng: -1.5197, city: "Coventry", country: "イギリス", region: "Europe" },
+  { company: "ジャガー", company_en: "Jaguar Land Rover (JLR)", company_type: "OEM", site_type: "Factory", site_name: "Castle Bromwich工場（Jaguar）", lat: 52.4984, lng: -1.7831, city: "Castle Bromwich", country: "イギリス", region: "Europe" },
+  { company: "ジャガー", company_en: "Jaguar Land Rover (JLR)", company_type: "OEM", site_type: "R&D", site_name: "JLR Engineering Centre（ゲイドン）", lat: 52.2208, lng: -1.5512, city: "Gaydon", country: "イギリス", region: "Europe" },
+  { company: "ジャガー", company_en: "Jaguar Land Rover (JLR)", company_type: "OEM", site_type: "Design", site_name: "JLR Design Centre（コベントリー）", lat: 52.4068, lng: -1.5197, city: "Coventry", country: "イギリス", region: "Europe" },
+  { company: "ジャガー", company_en: "Jaguar Land Rover (JLR)", company_type: "OEM", site_type: "Factory", site_name: "Pune工場（インド）", lat: 18.5204, lng: 73.8567, city: "プネー", country: "インド", region: "Asia" },
+
+  // --- ランドローバー（Land Rover / JLR） ---
+  { company: "ランドローバー", company_en: "Land Rover (JLR)", company_type: "OEM", site_type: "Factory", site_name: "Solihull工場（Land Rover）", lat: 52.4127, lng: -1.7764, city: "Solihull", country: "イギリス", region: "Europe" },
+  { company: "ランドローバー", company_en: "Land Rover (JLR)", company_type: "OEM", site_type: "Factory", site_name: "Halewood工場（Range Rover Evoque）", lat: 53.3694, lng: -2.8361, city: "Halewood", country: "イギリス", region: "Europe" },
+  { company: "ランドローバー", company_en: "Land Rover (JLR)", company_type: "OEM", site_type: "R&D", site_name: "Gaydon Engineering Centre", lat: 52.2208, lng: -1.5512, city: "Gaydon", country: "イギリス", region: "Europe" },
+  { company: "ランドローバー", company_en: "Land Rover (JLR)", company_type: "OEM", site_type: "Factory", site_name: "Changshu工場（中国）", lat: 31.6549, lng: 120.7522, city: "常熟", country: "中国", region: "China" },
+  { company: "ランドローバー", company_en: "Land Rover (JLR)", company_type: "OEM", site_type: "HQ", site_name: "JLR North America（マハワ）", lat: 41.0760, lng: -74.1454, city: "Mahwah, NJ", country: "アメリカ", region: "North America" },
+
+  // --- アストンマーティン（Aston Martin） ---
+  { company: "アストンマーティン", company_en: "Aston Martin Lagonda", company_type: "OEM", site_type: "HQ", site_name: "Aston Martin 本社（ゲイドン）", lat: 52.2208, lng: -1.5512, city: "Gaydon", country: "イギリス", region: "Europe" },
+  { company: "アストンマーティン", company_en: "Aston Martin Lagonda", company_type: "OEM", site_type: "Factory", site_name: "Gaydon工場", lat: 52.2208, lng: -1.5512, city: "Gaydon", country: "イギリス", region: "Europe" },
+  { company: "アストンマーティン", company_en: "Aston Martin Lagonda", company_type: "OEM", site_type: "Factory", site_name: "St Athan工場（ウェールズ）", lat: 51.3975, lng: -3.4436, city: "St Athan", country: "イギリス", region: "Europe" },
+  { company: "アストンマーティン", company_en: "Aston Martin Lagonda", company_type: "OEM", site_type: "Test", site_name: "Nürburgring テスト拠点", lat: 50.3356, lng: 6.9475, city: "Nürburg", country: "ドイツ", region: "Europe" },
+
+  // --- ロータス（Lotus） ---
+  { company: "ロータス", company_en: "Lotus Cars", company_type: "OEM", site_type: "HQ", site_name: "Lotus Cars 本社（ヘセル）", lat: 52.5612, lng: 1.1396, city: "Hethel", country: "イギリス", region: "Europe" },
+  { company: "ロータス", company_en: "Lotus Cars", company_type: "OEM", site_type: "Factory", site_name: "Hethel工場", lat: 52.5612, lng: 1.1396, city: "Hethel", country: "イギリス", region: "Europe" },
+  { company: "ロータス", company_en: "Lotus Cars", company_type: "OEM", site_type: "Factory", site_name: "武漢工場（Lotus Emeya/Eletre）", lat: 30.5928, lng: 114.3055, city: "武漢", country: "中国", region: "China" },
+  { company: "ロータス", company_en: "Lotus Cars", company_type: "OEM", site_type: "R&D", site_name: "Lotus Engineering（Hethel）", lat: 52.5612, lng: 1.1396, city: "Hethel", country: "イギリス", region: "Europe" },
+
+  // --- MINI ---
+  { company: "MINI", company_en: "MINI (BMW Group)", company_type: "OEM", site_type: "HQ", site_name: "MINI ブランドHQ（ミュンヘン）", lat: 48.1777, lng: 11.5564, city: "ミュンヘン", country: "ドイツ", region: "Europe" },
+  { company: "MINI", company_en: "MINI (BMW Group)", company_type: "OEM", site_type: "Factory", site_name: "Oxford工場（Plant Oxford）", lat: 51.7630, lng: -1.2628, city: "Oxford", country: "イギリス", region: "Europe" },
+  { company: "MINI", company_en: "MINI (BMW Group)", company_type: "OEM", site_type: "Factory", site_name: "Born工場（オランダ）", lat: 51.0539, lng: 5.8567, city: "Born", country: "オランダ", region: "Europe" },
+  { company: "MINI", company_en: "MINI (BMW Group)", company_type: "OEM", site_type: "Design", site_name: "MINI Design Studio（ミュンヘン）", lat: 48.1777, lng: 11.5564, city: "ミュンヘン", country: "ドイツ", region: "Europe" },
+  { company: "MINI", company_en: "MINI (BMW Group)", company_type: "OEM", site_type: "Factory", site_name: "Zhang Jiagang工場（中国 BMW Brilliance）", lat: 31.8735, lng: 120.5548, city: "張家港", country: "中国", region: "China" },
+
+  // --- ルノー（Renault） ---
+  { company: "ルノー", company_en: "Renault Group", company_type: "OEM", site_type: "HQ", site_name: "Renault 本社（ブローニュ＝ビヤンクール）", lat: 48.8347, lng: 2.2397, city: "Boulogne-Billancourt", country: "フランス", region: "Europe" },
+  { company: "ルノー", company_en: "Renault Group", company_type: "OEM", site_type: "Factory", site_name: "Flins工場", lat: 48.9645, lng: 1.8601, city: "Flins-sur-Seine", country: "フランス", region: "Europe" },
+  { company: "ルノー", company_en: "Renault Group", company_type: "OEM", site_type: "Factory", site_name: "Douai工場（ElectriCity）", lat: 50.3748, lng: 3.0803, city: "Douai", country: "フランス", region: "Europe" },
+  { company: "ルノー", company_en: "Renault Group", company_type: "OEM", site_type: "Factory", site_name: "Maubeuge工場", lat: 50.2763, lng: 3.9733, city: "Maubeuge", country: "フランス", region: "Europe" },
+  { company: "ルノー", company_en: "Renault Group", company_type: "OEM", site_type: "R&D", site_name: "Renault技術センター（ギアンクール）", lat: 49.0333, lng: 1.8667, city: "Guyancourt", country: "フランス", region: "Europe" },
+  { company: "ルノー", company_en: "Renault Group", company_type: "OEM", site_type: "Test", site_name: "Lardy試験場", lat: 48.4622, lng: 2.2578, city: "Lardy", country: "フランス", region: "Europe" },
+  { company: "ルノー", company_en: "Renault Group", company_type: "OEM", site_type: "Factory", site_name: "Palencia工場（スペイン）", lat: 42.0095, lng: -4.5278, city: "Palencia", country: "スペイン", region: "Europe" },
+  { company: "ルノー", company_en: "Renault Group", company_type: "OEM", site_type: "Factory", site_name: "Novo Mesto工場（スロベニア）", lat: 45.8011, lng: 15.1688, city: "Novo Mesto", country: "スロベニア", region: "Europe" },
+  { company: "ルノー", company_en: "Renault Group", company_type: "OEM", site_type: "Factory", site_name: "Bursa工場（OYAK Renault）", lat: 40.2667, lng: 29.0, city: "Bursa", country: "トルコ", region: "Europe" },
+  { company: "ルノー", company_en: "Renault Group", company_type: "OEM", site_type: "Factory", site_name: "Chennai工場（RNAIPL）", lat: 12.9716, lng: 80.2209, city: "Chennai", country: "インド", region: "Asia" },
+
+  // --- プジョー（Peugeot / Stellantis） ---
+  { company: "プジョー", company_en: "Peugeot (Stellantis)", company_type: "OEM", site_type: "HQ", site_name: "Peugeot ブランドHQ（ソショー）", lat: 47.5145, lng: 6.8064, city: "Sochaux", country: "フランス", region: "Europe" },
+  { company: "プジョー", company_en: "Peugeot (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Sochaux工場", lat: 47.5145, lng: 6.8064, city: "Sochaux", country: "フランス", region: "Europe" },
+  { company: "プジョー", company_en: "Peugeot (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Mulhouse工場", lat: 47.7500, lng: 7.3400, city: "Mulhouse", country: "フランス", region: "Europe" },
+  { company: "プジョー", company_en: "Peugeot (Stellantis)", company_type: "OEM", site_type: "R&D", site_name: "PSA/Stellantis研究開発センター（ヴェリジー）", lat: 48.7791, lng: 2.1506, city: "Vélizy-Villacoublay", country: "フランス", region: "Europe" },
+  { company: "プジョー", company_en: "Peugeot (Stellantis)", company_type: "OEM", site_type: "Test", site_name: "Belchamp試験場", lat: 47.6167, lng: 6.8167, city: "Belchamp", country: "フランス", region: "Europe" },
+  { company: "プジョー", company_en: "Peugeot (Stellantis)", company_type: "OEM", site_type: "Factory", site_name: "Trnava工場（スロバキア）", lat: 48.3774, lng: 17.5878, city: "Trnava", country: "スロバキア", region: "Europe" },
+
+  // --- BYD（比亜迪） ---
+  { company: "BYD", company_en: "BYD Co., Ltd.", company_type: "OEM", site_type: "HQ", site_name: "BYD 本社（深圳）", lat: 22.5975, lng: 114.0276, city: "深圳", country: "中国", region: "China" },
+  { company: "BYD", company_en: "BYD Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "深圳坪山工場", lat: 22.7122, lng: 114.3494, city: "深圳", country: "中国", region: "China" },
+  { company: "BYD", company_en: "BYD Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "長沙工場", lat: 28.2278, lng: 112.9388, city: "長沙", country: "中国", region: "China" },
+  { company: "BYD", company_en: "BYD Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "西安工場", lat: 34.3416, lng: 108.9398, city: "西安", country: "中国", region: "China" },
+  { company: "BYD", company_en: "BYD Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "鄭州工場", lat: 34.7472, lng: 113.6249, city: "鄭州", country: "中国", region: "China" },
+  { company: "BYD", company_en: "BYD Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "合肥工場", lat: 31.8206, lng: 117.2272, city: "合肥", country: "中国", region: "China" },
+  { company: "BYD", company_en: "BYD Co., Ltd.", company_type: "OEM", site_type: "R&D", site_name: "BYD 研究院（深圳）", lat: 22.5975, lng: 114.0276, city: "深圳", country: "中国", region: "China" },
+  { company: "BYD", company_en: "BYD Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "BYD Thailand工場（ラヨーン）", lat: 12.6834, lng: 101.2816, city: "Rayong", country: "タイ", region: "Asia" },
+  { company: "BYD", company_en: "BYD Co., Ltd.", company_type: "OEM", site_type: "Factory", site_name: "BYD Hungary工場（セゲド）", lat: 46.2530, lng: 20.1414, city: "Szeged", country: "ハンガリー", region: "Europe" },
+  { company: "BYD", company_en: "BYD Co., Ltd.", company_type: "OEM", site_type: "HQ", site_name: "BYD Europe（アムステルダム）", lat: 52.3676, lng: 4.9041, city: "アムステルダム", country: "オランダ", region: "Europe" },
+
+  // --- 吉利汽車（Geely） ---
+  { company: "吉利汽車", company_en: "Geely Automobile Holdings", company_type: "OEM", site_type: "HQ", site_name: "吉利汽車 本社（杭州）", lat: 30.2741, lng: 120.1551, city: "杭州", country: "中国", region: "China" },
+  { company: "吉利汽車", company_en: "Geely Automobile Holdings", company_type: "OEM", site_type: "Factory", site_name: "吉利 寧波工場", lat: 29.8683, lng: 121.5440, city: "寧波", country: "中国", region: "China" },
+  { company: "吉利汽車", company_en: "Geely Automobile Holdings", company_type: "OEM", site_type: "Factory", site_name: "吉利 上海工場（Zeekr）", lat: 31.2304, lng: 121.4737, city: "上海", country: "中国", region: "China" },
+  { company: "吉利汽車", company_en: "Geely Automobile Holdings", company_type: "OEM", site_type: "R&D", site_name: "吉利研究院（杭州）", lat: 30.2741, lng: 120.1551, city: "杭州", country: "中国", region: "China" },
+  { company: "吉利汽車", company_en: "Geely Automobile Holdings", company_type: "OEM", site_type: "HQ", site_name: "Geely Global HQ / CEVT（哥テボリ）", lat: 57.7089, lng: 11.9746, city: "ヨーテボリ", country: "スウェーデン", region: "Europe" },
+  { company: "吉利汽車", company_en: "Geely Automobile Holdings", company_type: "OEM", site_type: "Factory", site_name: "Volvo Cars Torslanda工場（提携）", lat: 57.7302, lng: 11.8943, city: "Torslanda", country: "スウェーデン", region: "Europe" },
+
+  // --- 上海汽車集団（SAIC Motor） ---
+  { company: "上海汽車集団", company_en: "SAIC Motor Corporation", company_type: "OEM", site_type: "HQ", site_name: "SAIC Motor 本社（上海）", lat: 31.2304, lng: 121.4737, city: "上海", country: "中国", region: "China" },
+  { company: "上海汽車集団", company_en: "SAIC Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "上汽乗用車（上海）工場", lat: 31.1894, lng: 121.5853, city: "上海嘉定区", country: "中国", region: "China" },
+  { company: "上海汽車集団", company_en: "SAIC Motor Corporation", company_type: "OEM", site_type: "R&D", site_name: "SAIC R&Dセンター（嘉定）", lat: 31.3741, lng: 121.2652, city: "上海嘉定区", country: "中国", region: "China" },
+  { company: "上海汽車集団", company_en: "SAIC Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "上汽GM五菱（柳州）", lat: 24.3264, lng: 109.4281, city: "柳州", country: "中国", region: "China" },
+  { company: "上海汽車集団", company_en: "SAIC Motor Corporation", company_type: "OEM", site_type: "Factory", site_name: "SAIC Thailand工場", lat: 13.7563, lng: 100.5018, city: "バンコク", country: "タイ", region: "Asia" },
+  { company: "上海汽車集団", company_en: "SAIC Motor Corporation", company_type: "OEM", site_type: "HQ", site_name: "SAIC Europe（ロンドン）", lat: 51.5074, lng: -0.1278, city: "ロンドン", country: "イギリス", region: "Europe" },
+
+  // --- 長安汽車（Changan） ---
+  { company: "長安汽車", company_en: "Changan Automobile", company_type: "OEM", site_type: "HQ", site_name: "長安汽車 本社（重慶）", lat: 29.5630, lng: 106.5516, city: "重慶", country: "中国", region: "China" },
+  { company: "長安汽車", company_en: "Changan Automobile", company_type: "OEM", site_type: "Factory", site_name: "重慶工場（江北）", lat: 29.6386, lng: 106.6258, city: "重慶", country: "中国", region: "China" },
+  { company: "長安汽車", company_en: "Changan Automobile", company_type: "OEM", site_type: "R&D", site_name: "長安研究院（重慶）", lat: 29.5630, lng: 106.5516, city: "重慶", country: "中国", region: "China" },
+  { company: "長安汽車", company_en: "Changan Automobile", company_type: "OEM", site_type: "R&D", site_name: "長安英国デザインセンター（ノッティンガム）", lat: 52.9548, lng: -1.1581, city: "Nottingham", country: "イギリス", region: "Europe" },
+  { company: "長安汽車", company_en: "Changan Automobile", company_type: "OEM", site_type: "R&D", site_name: "長安イタリアデザインセンター（トリノ）", lat: 45.0703, lng: 7.6869, city: "トリノ", country: "イタリア", region: "Europe" },
+
+  // --- 奇瑞汽車（Chery） ---
+  { company: "奇瑞汽車", company_en: "Chery Automobile", company_type: "OEM", site_type: "HQ", site_name: "奇瑞汽車 本社（蕪湖）", lat: 31.3520, lng: 118.4328, city: "蕪湖", country: "中国", region: "China" },
+  { company: "奇瑞汽車", company_en: "Chery Automobile", company_type: "OEM", site_type: "Factory", site_name: "蕪湖工場", lat: 31.3520, lng: 118.4328, city: "蕪湖", country: "中国", region: "China" },
+  { company: "奇瑞汽車", company_en: "Chery Automobile", company_type: "OEM", site_type: "R&D", site_name: "奇瑞研究院（蕪湖）", lat: 31.3520, lng: 118.4328, city: "蕪湖", country: "中国", region: "China" },
+  { company: "奇瑞汽車", company_en: "Chery Automobile", company_type: "OEM", site_type: "Factory", site_name: "Chery Brazil工場（ジャカレイ）", lat: -23.3046, lng: -45.966, city: "Jacarei", country: "ブラジル", region: "Other" },
+
+  // --- 東風汽車集団（Dongfeng Motor） ---
+  { company: "東風汽車集団", company_en: "Dongfeng Motor Group", company_type: "OEM", site_type: "HQ", site_name: "東風汽車 本社（武漢）", lat: 30.5928, lng: 114.3055, city: "武漢", country: "中国", region: "China" },
+  { company: "東風汽車集団", company_en: "Dongfeng Motor Group", company_type: "OEM", site_type: "Factory", site_name: "東風乗用車工場（武漢）", lat: 30.5928, lng: 114.3055, city: "武漢", country: "中国", region: "China" },
+  { company: "東風汽車集団", company_en: "Dongfeng Motor Group", company_type: "OEM", site_type: "Factory", site_name: "東風日産（広州）", lat: 23.1291, lng: 113.2644, city: "広州", country: "中国", region: "China" },
+  { company: "東風汽車集団", company_en: "Dongfeng Motor Group", company_type: "OEM", site_type: "R&D", site_name: "東風技術センター（武漢）", lat: 30.5928, lng: 114.3055, city: "武漢", country: "中国", region: "China" },
+  { company: "東風汽車集団", company_en: "Dongfeng Motor Group", company_type: "OEM", site_type: "HQ", site_name: "東風 欧州本部（パリ）", lat: 48.8566, lng: 2.3522, city: "Paris", country: "フランス", region: "Europe" },
+
+  // --- 第一汽車（FAW Group） ---
+  { company: "第一汽車", company_en: "FAW Group Corporation", company_type: "OEM", site_type: "HQ", site_name: "第一汽車（FAW）本社（長春）", lat: 43.8171, lng: 125.3235, city: "長春", country: "中国", region: "China" },
+  { company: "第一汽車", company_en: "FAW Group Corporation", company_type: "OEM", site_type: "Factory", site_name: "FAW乗用車工場（長春）", lat: 43.8171, lng: 125.3235, city: "長春", country: "中国", region: "China" },
+  { company: "第一汽車", company_en: "FAW Group Corporation", company_type: "OEM", site_type: "Factory", site_name: "FAW-Toyota工場（長春）", lat: 43.7500, lng: 125.3800, city: "長春", country: "中国", region: "China" },
+  { company: "第一汽車", company_en: "FAW Group Corporation", company_type: "OEM", site_type: "R&D", site_name: "FAW技術センター（長春）", lat: 43.8171, lng: 125.3235, city: "長春", country: "中国", region: "China" },
+  { company: "第一汽車", company_en: "FAW Group Corporation", company_type: "OEM", site_type: "Factory", site_name: "Hongqi（紅旗）工場（長春）", lat: 43.8500, lng: 125.4000, city: "長春", country: "中国", region: "China" },
+
+  // --- Xiaomi汽車（小米汽車） ---
+  { company: "Xiaomi汽車", company_en: "Xiaomi EV (Xiaomi Corporation)", company_type: "OEM", site_type: "HQ", site_name: "Xiaomi汽車 本社（北京）", lat: 40.0581, lng: 116.5977, city: "北京", country: "中国", region: "China" },
+  { company: "Xiaomi汽車", company_en: "Xiaomi EV (Xiaomi Corporation)", company_type: "OEM", site_type: "Factory", site_name: "Xiaomi自動車工場（北京亦庄）", lat: 39.8046, lng: 116.5267, city: "北京経済技術開発区", country: "中国", region: "China" },
+  { company: "Xiaomi汽車", company_en: "Xiaomi EV (Xiaomi Corporation)", company_type: "OEM", site_type: "R&D", site_name: "Xiaomi EV 研究院（北京）", lat: 40.0581, lng: 116.5977, city: "北京", country: "中国", region: "China" },
+
+  // --- 小鵬汽車（XPeng） ---
+  { company: "小鵬汽車", company_en: "XPeng Inc.", company_type: "OEM", site_type: "HQ", site_name: "小鵬汽車 本社（広州）", lat: 23.1291, lng: 113.2644, city: "広州", country: "中国", region: "China" },
+  { company: "小鵬汽車", company_en: "XPeng Inc.", company_type: "OEM", site_type: "Factory", site_name: "肇慶工場", lat: 23.0466, lng: 112.4657, city: "肇慶", country: "中国", region: "China" },
+  { company: "小鵬汽車", company_en: "XPeng Inc.", company_type: "OEM", site_type: "Factory", site_name: "広州工場", lat: 23.1291, lng: 113.2644, city: "広州", country: "中国", region: "China" },
+  { company: "小鵬汽車", company_en: "XPeng Inc.", company_type: "OEM", site_type: "R&D", site_name: "XPeng 研究院（広州）", lat: 23.1291, lng: 113.2644, city: "広州", country: "中国", region: "China" },
+  { company: "小鵬汽車", company_en: "XPeng Inc.", company_type: "OEM", site_type: "HQ", site_name: "XPeng Europe（ミュンヘン）", lat: 48.1351, lng: 11.5820, city: "ミュンヘン", country: "ドイツ", region: "Europe" },
+
+  // --- 哪吒汽車（Neta） ---
+  { company: "哪吒汽車", company_en: "Neta Auto (Hozon Auto)", company_type: "OEM", site_type: "HQ", site_name: "哪吒汽車 本社（上海）", lat: 31.2304, lng: 121.4737, city: "上海", country: "中国", region: "China" },
+  { company: "哪吒汽車", company_en: "Neta Auto (Hozon Auto)", company_type: "OEM", site_type: "Factory", site_name: "哪吒 嘉興工場", lat: 30.7522, lng: 120.7569, city: "嘉興", country: "中国", region: "China" },
+  { company: "哪吒汽車", company_en: "Neta Auto (Hozon Auto)", company_type: "OEM", site_type: "Factory", site_name: "哪吒 桐鄉工場", lat: 30.6303, lng: 120.5440, city: "桐郷", country: "中国", region: "China" },
+  { company: "哪吒汽車", company_en: "Neta Auto (Hozon Auto)", company_type: "OEM", site_type: "Factory", site_name: "Neta Thailand工場", lat: 13.7563, lng: 100.5018, city: "バンコク", country: "タイ", region: "Asia" },
+
+  // --- 零跑汽車（Leapmotor） ---
+  { company: "零跑汽車", company_en: "Leapmotor (Zhejiang Leapmotor Technology)", company_type: "OEM", site_type: "HQ", site_name: "零跑汽車 本社（杭州）", lat: 30.2741, lng: 120.1551, city: "杭州", country: "中国", region: "China" },
+  { company: "零跑汽車", company_en: "Leapmotor (Zhejiang Leapmotor Technology)", company_type: "OEM", site_type: "Factory", site_name: "零跑 金華工場", lat: 29.0792, lng: 119.6472, city: "金華", country: "中国", region: "China" },
+  { company: "零跑汽車", company_en: "Leapmotor (Zhejiang Leapmotor Technology)", company_type: "OEM", site_type: "Factory", site_name: "Leapmotor International（Stellantis提携、ティヒー）", lat: 50.1228, lng: 18.9989, city: "Tychy", country: "ポーランド", region: "Europe" },
+  { company: "零跑汽車", company_en: "Leapmotor (Zhejiang Leapmotor Technology)", company_type: "OEM", site_type: "R&D", site_name: "零跑 研究院（杭州）", lat: 30.2741, lng: 120.1551, city: "杭州", country: "中国", region: "China" }
 ];
 
-// Total: 343 locations
+// Total: 649 locations
