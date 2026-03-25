@@ -668,6 +668,16 @@
     'Test':    'T',
   };
 
+  // 表示優先度（高いほど前面）
+  const SITE_Z_OFFSET = {
+    'HQ':      500,
+    'R&D':     400,
+    'Factory': 300,
+    'Sales':   200,
+    'Design':  100,
+    'Test':      0,
+  };
+
   function createMarkerIcon(loc) {
     const color = TYPE_COLORS[loc.company_type] || '#888';
     const label = SITE_LABELS[loc.site_type] || '?';
@@ -738,7 +748,10 @@
     const filtered = getFilteredLocations();
 
     filtered.forEach(loc => {
-      const marker = L.marker([loc.lat, loc.lng], { icon: createMarkerIcon(loc) });
+      const marker = L.marker([loc.lat, loc.lng], {
+        icon: createMarkerIcon(loc),
+        zIndexOffset: SITE_Z_OFFSET[loc.site_type] ?? 0,
+      });
       marker.bindPopup(createPopupContent(loc), { maxWidth: 280 });
       marker.addTo(markerLayer);
       markerMap[loc.id] = marker;
