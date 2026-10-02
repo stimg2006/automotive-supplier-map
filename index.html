@@ -646,6 +646,8 @@
   }).addTo(map);
 
   // ===== State =====
+  LOCATIONS.forEach((loc, i) => { loc.id = i; });
+
   const ALL_COMPANIES = [...new Set(LOCATIONS.map(l => l.company))];
 
   const state = {
@@ -833,19 +835,27 @@
     'Other':         '🌍 その他',
   };
 
-  // 会社ごとに type・本社地域 を取得（最初に見つかったHQの地域を使用）
+  // 会社ごとに type・本拠地域 を取得
+  // 本拠地域: 「本社」「ブランドHQ」のHQ拠点の地域。無ければ拠点数が最多の地域
+  // （地域統括HQしか無い会社を、その統括地域に分類しないため）
   const companyTypeMap       = {};
   const companyHomeRegionMap = {};
-  const companyHasHQ         = {};
+  const companySites         = {};
   LOCATIONS.forEach(l => {
     companyTypeMap[l.company] = l.company_type;
-    if (!companyHomeRegionMap[l.company]) {
-      companyHomeRegionMap[l.company] = l.region; // 暫定（最初の拠点）
+    (companySites[l.company] ||= []).push(l);
+  });
+  Object.entries(companySites).forEach(([company, sites]) => {
+    const mainHQ = sites.find(l =>
+      l.site_type === 'HQ' && (l.site_name.includes('本社') || l.site_name.includes('ブランドHQ')));
+    if (mainHQ) {
+      companyHomeRegionMap[company] = mainHQ.region;
+      return;
     }
-    if (l.site_type === 'HQ' && !companyHasHQ[l.company]) {
-      companyHomeRegionMap[l.company] = l.region; // 最初のHQで確定
-      companyHasHQ[l.company] = true;
-    }
+    const regionCounts = {};
+    sites.forEach(l => regionCounts[l.region] = (regionCounts[l.region] || 0) + 1);
+    companyHomeRegionMap[company] = Object.keys(regionCounts)
+      .reduce((a, b) => regionCounts[b] > regionCounts[a] ? b : a);
   });
 
   function renderCompanyItems(companies, color) {
